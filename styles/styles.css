@@ -26,6 +26,11 @@ section {
     position: relative;
 }
 
+#about-section {
+    background-color: whitesmoke;
+    position: relative;
+}
+
 #title-div {
     margin: 0;
     position: absolute;
@@ -71,3 +76,4 @@ section {
     border-width: 10px;
     border-bottom: 0;
 }
+
