@@ -1,0 +1,73 @@
+
+
+/*----------TAG SELECTORS----------*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*----------CLASS SELECTORS----------*/
+.sticky {
+  position: fixed;
+}
+/*----------ID SELECTORS----------*/
+
+body {
+    overflow-x: hidden;
+}
+
+
+section {
+    height: 100vh;
+}
+
+#title-section {
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    position: relative;
+}
+
+#title-div {
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+#title-div h1, #title-div h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+#title-div h1 {
+    font-size: 4rem;
+}
+
+#title-div h2 {
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    #title-div h1 {
+        font-size: 2rem;
+    }
+
+    #title-div h2 {
+        font-size: 4rem;
+    }
+}
+
+
+
+#welcome-to-hr {
+    border-style: dotted;
+    width: 25vw;
+    margin: 0 37.5vw;
+    color: whitesmoke;
+    border-width: 10px;
+    border-bottom: 0;
+}
