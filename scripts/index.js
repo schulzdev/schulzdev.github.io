@@ -6,6 +6,10 @@ function changeProjects() {
     document.getElementById("button-projects").innerHTML = "Projects";
 }
 
+function changeAboutMe() {
+    document.getElementById("button-about-me").innerHTML = "About Me";
+}
+
 function changeWelcome() {
     document.getElementById("button-welcome").innerHTML = "Home";
 }
@@ -20,4 +24,8 @@ function changeProjectsIcon() {
 
 function changeWelcomeIcon() {
     document.getElementById("button-welcome").innerHTML = '<i class="fas fa-door-open"></i>'
+}
+
+function changeAboutMeIcon() {
+    document.getElementById("button-about-me").innerHTML = '<i class="fas fa-user"></i>'
 }

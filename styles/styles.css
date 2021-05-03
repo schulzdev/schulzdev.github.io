@@ -56,7 +56,103 @@ section {
     font-weight: 500;
 }
 
-@media (max-width: 800px) {
+
+#scroll-down {
+    position: absolute;
+    width: 50vw;
+    margin: 10vh 25vw 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#scroll-down a {
+    color: black;
+    text-decoration: none;
+}
+
+.welcome-to-hr {
+    border-style: solid;
+    border-radius: 10px;
+    width: 25vw;
+    margin: 0 37.5vw;
+    color: whitesmoke;
+    border-width: 10px;
+    border-bottom: 0;
+}
+
+#about-me-header {
+    font-size: 5rem;
+}
+
+#after-name-hr {
+    width: 35vw;
+    margin: 0 32.5vw;
+    color: #2C2A2A;
+}
+
+#about-me-header {
+    padding-top: 10vh;
+    text-align: center;
+    text-decoration: underline;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+}
+
+#about-me-short {
+    margin: 10vh 25vw;
+    line-height: 4vh;
+    width: 50vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+#about-section {
+    background-color: #98D0CA;
+}
+
+
+#about-div {
+    padding: 10vh 10vw;
+}
+
+#about-div p {
+    display: block;
+    font-family: Ubuntu, sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+#about-education {
+    text-align: left;
+    margin-left: 20%;
+}
+
+#about-dev {
+    text-align: right;
+    margin-right: 20%;
+}
+
+#about-div p a {
+    color: whitesmoke;
+}
+
+.about-icon {
+    float: left;
+    font-size: 10rem;
+}
+
+#about-icon-dev {
+    float: right;
+    font-size: 10rem;
+}
+
+.about-me-hr {
+    margin: 5vh auto;
+    width: 50vw;
+}
+
+@media (max-width: 768px) {
     #title-div h1 {
         font-size: 2rem;
     }
@@ -79,32 +175,49 @@ section {
         margin: 0 25vw;
         color: #2C2A2A;
     }
+
+    #scroll-down {
+        width: 50vw;
+        margin: -5vh 25vw;
+        font-size: 1rem;
+    }
+
+    #about-me-header {
+        padding-top: 5vh;
+        font-size: 3rem;
+    }
+
+
+
+    /* About Me */
+
+    #about-div {
+        text-align: center;
+    }
+
+    .about-icon, #about-icon-dev {
+        float: none;
+        font-size: 2rem;
+    }
+
+    #about-div p {
+        font-size: 1rem;
+        line-height: 2;
+    }
+
+    #about-education, #about-dev {
+        margin: 0;
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .about-me-hr {
+        margin: 5vh 15vw;
+        width: 50vw;
+    }
 }
 
 
 
-.welcome-to-hr {
-    border-style: solid;
-    border-radius: 10px;
-    width: 25vw;
-    margin: 0 37.5vw;
-    color: whitesmoke;
-    border-width: 10px;
-    border-bottom: 0;
-}
-
-#after-name-hr {
-    width: 35vw;
-    margin: 0 32.5vw;
-    color: #2C2A2A;
-}
 
 
-#about-me-short {
-    margin: 10vh 25vw;
-    line-height: 6vh;
-    width: 50vw;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-}
