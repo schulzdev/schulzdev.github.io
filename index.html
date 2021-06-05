@@ -5,10 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
+		<!-- <link
 			href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
 			rel="stylesheet"
-		/>
+		/> -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -22,7 +22,7 @@
 			crossorigin="anonymous"
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@100;300;400;900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@100;300;400;900&display=swap&family=Roboto+Mono:wght@300&display=swap&family=Ubuntu:wght@300&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./styles/styles.css" />
@@ -32,171 +32,382 @@
 			src="https://kit.fontawesome.com/816474b83a.js"
 			crossorigin="anonymous"
 		></script>
-		<script defer src="./scripts/index.js"></script>
 		<script
 			defer
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
 			crossorigin="anonymous"
 		></script>
+		<script defer src="./scripts/index.js"></script>
 		<title>SchulzDEV</title>
 	</head>
 	<body>
 		<div id="fullpage">
-			<div class="section">
-				<section id="title-section">
-					<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
-						<div class="container-fluid">
-							<a class="navbar-brand" href="#">SchulzDEV</a>
-							<button
-								class="navbar-toggler"
-								type="button"
-								data-bs-toggle="collapse"
-								data-bs-target="#navbarNavAltMarkup"
-								aria-controls="navbarNavAltMarkup"
-								aria-expanded="false"
-								aria-label="Toggle navigation"
-							>
-								<span class="navbar-toggler-icon"></span>
-							</button>
-							<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-								<div class="navbar-nav ms-auto">
-									<a
-										id="button-welcome"
-										class="nav-link px-3 active"
-										onmouseover="changeWelcome()"
-										onmouseleave="changeWelcomeIcon()"
-										aria-current="page"
-										href="#"
-										><i class="fas fa-door-open"></i
-									></a>
-									<a
-										id="button-discord"
-										class="nav-link px-3"
-										onmouseover="changeDiscord()"
-										onmouseleave="changeDiscordIcon()"
-										aria-current="page"
-										href="http://discord.schulzdev.com"
-										><i class="fab fa-discord"></i
-									></a>
-									<a
-										id="button-about-me"
-										class="nav-link px-3"
-										onmouseover="changeAboutMe()"
-										onmouseleave="changeAboutMeIcon()"
-										href="#about-section"
-										><i class="fas fa-user"></i
-									></a>
-									<a
-										id="button-projects"
-										class="nav-link px-3"
-										onmouseover="changeProjects()"
-										onmouseleave="changeProjectsIcon()"
-										href="#projects"
-										><i class="fas fa-terminal"></i
-									></a>
-									<a
-										id="button-github"
-										class="nav-link px-3"
-										onmouseover="changeGithub()"
-										onmouseleave="changeGithubIcon()"
-										href="https://www.github.com/schulzdev"
-										><i class="fab fa-github"></i
-									></a>
-									<a
-										id="button-tiktok"
-										class="nav-link px-3"
-										onmouseover="changeTiktok()"
-										onmouseleave="changeTiktokIcon()"
-										href="./tiktok/tiktok.html"
-										><i class="fab fa-tiktok"></i
-									></a>
-									<a
-										class="nav-link px-3"
-										href="https://sites.google.com/view/schulzdev/start"
-										tabindex="-1"
-										aria-disabled="true"
-										>Old Website</a
-									>
+			<div id="child-sec">
+				<div class="section">
+					<section id="title-section">
+						<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
+							<div class="container-fluid">
+								<a class="navbar-brand" href="#">SchulzDEV</a>
+								<button
+									class="navbar-toggler"
+									data-bs-toggle="collapse"
+									data-bs-target="#navbarNavAltMarkup"
+									aria-controls="navbarNavAltMarkup"
+									aria-expanded="false"
+									aria-label="Toggle navigation"
+								>
+									<span class="navbar-toggler-icon"></span>
+								</button>
+								<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+									<div class="navbar-nav ms-auto">
+										<a
+											id="button-welcome"
+											class="nav-link px-3 active"
+											onmouseover="changeWelcome()"
+											onmouseleave="changeWelcomeIcon()"
+											aria-current="page"
+											href="#"
+											><i class="fas fa-door-open"></i
+										></a>
+										<a
+											id="button-projects"
+											class="nav-link px-3"
+											onmouseover="changeProjects()"
+											onmouseleave="changeProjectsIcon()"
+											href="#projects"
+											><i class="fas fa-terminal"></i
+										></a>
+										<a
+											id="button-about-me"
+											class="nav-link px-3"
+											onmouseover="changeAboutMe()"
+											onmouseleave="changeAboutMeIcon()"
+											href="#about-section"
+											><i class="fas fa-user"></i
+										></a>
+										<a
+											id="button-techno"
+											class="nav-link px-3"
+											onmouseover="changeTechno()"
+											onmouseleave="changeTechnoIcon()"
+											href="#technologies-section"
+											><i class="fas fa-memory"></i>
+										</a>
+										<a
+											id="button-contact-me"
+											class="nav-link px-3"
+											onmouseover="changeContactMe()"
+											onmouseleave="changeContactMeIcon()"
+											href="#footer-section"
+											><i class="far fa-address-card"></i
+										></a>
+										<a class="nav-link px-3"
+											><i
+												class="fas fa-grip-lines-vertical"
+												style="color: white"
+											></i
+										></a>
+										<a
+											id="button-github"
+											class="nav-link px-3"
+											onmouseover="changeGithub()"
+											onmouseleave="changeGithubIcon()"
+											href="https://www.github.com/schulzdev"
+											><i class="fab fa-github"></i
+										></a>
+										<a
+											id="button-youtube"
+											class="nav-link px-3"
+											onmouseover="changeYT()"
+											onmouseleave="changeYTIcon()"
+											href="https://www.youtube.com/channel/UCcnrSkk0K2mwLMIjl64ky-w"
+											><i class="fab fa-youtube"></i
+										></a>
+										<a
+											id="button-discord"
+											class="nav-link px-3"
+											onmouseover="changeDiscord()"
+											onmouseleave="changeDiscordIcon()"
+											aria-current="page"
+											href="http://discord.schulzdev.com"
+											><i class="fab fa-discord"></i
+										></a>
+										<a
+											id="button-tiktok"
+											class="nav-link px-3"
+											onmouseover="changeTiktok()"
+											onmouseleave="changeTiktokIcon()"
+											href="./tiktok/tiktok.html"
+											><i class="fab fa-tiktok"></i
+										></a>
+										<a
+											id="old-web"
+											class="nav-link px-3"
+											href="https://sites.google.com/view/schulzdev/start"
+											onmouseover="changeOld()"
+											onmouseleave="changeOldIcon()"
+											aria-disabled="true"
+											><i class="fas fa-history"></i
+										></a>
+										<a class="nav-link px-3 pl-5"
+											><i
+												class="fas fa-grip-lines-vertical"
+												style="color: white"
+											></i
+										></a>
+									</div>
 								</div>
 							</div>
+						</nav>
+
+						<div id="title-div">
+							<h1>Welcome to</h1>
+							<h2>SchulzDEV</h2>
+							<hr class="welcome-to-hr after-name-hr" />
+							<p class="about-me-short">
+								My name is Max, I am 16 years old and a
+								<span style="text-decoration: underline">pro</span>grammer in my
+								free time!
+							</p>
+							<div id="scroll-down">
+								<a href="#projects">Scroll down to read more about me.</a>
+								<br />
+								<i class="fas fa-arrow-down"></i>
+							</div>
 						</div>
-					</nav>
-
-					<div id="title-div">
-						<h1>Welcome to</h1>
-						<hr class="welcome-to-hr" />
-						<h2>SchulzDEV</h2>
-						<hr class="welcome-to-hr" id="after-name-hr" />
+					</section>
+				</div>
+				<div class="section">
+					<section id="projects">
+						<h1 class="projects-header">Projects</h1>
 						<p class="about-me-short">
-							My name is Max, I am 16 years old and a
-							<span style="text-decoration: underline">pro</span>grammer in my
-							free time!
+							Thanks for your interest. Down below are some of my best projects.
+							Click on the Project to see the live preview(if applicable), else
+							click the button on the bottom to go to the specifc
+							<a href="https://www.github.com/schulzdev">GitHub</a> Repository!
 						</p>
-						<!-- <div id="scroll-down">
-							<a href="#about-section">Scroll down to read more about me.</a>
-							<br />
-							<i class="fas fa-arrow-down"></i>
-						</div> -->
-					</div>
-				</section>
+						<div class="projects-wrapper">
+							<div class="project-item">
+								Discord Bot <strong>Python</strong>
+								<a
+									class="btn btn-primary"
+									href="https://github.com/schulzdev/python-discord-bot-rewrite"
+								>
+									View on GitHub
+								</a>
+								<a type="disabled" class="btn btn-secondary disabled">
+									View Production
+								</a>
+							</div>
+							<div class="project-item">
+								Discord Bot <strong>Javascript</strong>
+								<a class="btn btn-primary disabled"> View on GitHub </a>
+								<a
+									class="btn btn-secondary"
+									href="https://discord.com/invite/vEU5fU7sAb"
+								>
+									View in Discord
+								</a>
+							</div>
+							<div class="project-item">
+								This Website
+								<a
+									class="btn btn-primary"
+									href="https://github.com/schulzdev/schulzdev.github.io"
+								>
+									View on GitHub
+								</a>
+								<a class="btn btn-secondary" href="#"> View Production </a>
+							</div>
+							<div class="project-item">
+								About Website
+								<a class="btn btn-primary disabled"> View on GitHub </a>
+								<a class="btn btn-secondary" href="https://about.schulzdev.com">
+									View Production
+								</a>
+							</div>
+							<div class="project-item">
+								semicolon Social Network
+								<a class="btn btn-primary disabled"> View on GitHub </a>
+								<a class="btn btn-secondary" href="https://app.schulzdev.com">
+									View Production
+								</a>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="section">
+					<section id="about-section">
+						<h1 class="projects-header">About Me</h1>
+						<div id="about-div">
+							<i class="fas fa-school about-icon"></i>
+							<p id="about-education">
+								I am a 16 year old Student from Germany.
+								<br />
+								I am still in school until 2023. When I am done with school, I
+								want to study computer science to then get a job as a Software
+								Engineer.
+							</p>
+							<hr class="welcome-to-hr about-me-hr" />
+							<i class="fas fa-laptop-code about-icon" id="about-icon-dev"></i>
+							<p id="about-dev">
+								In the beginning of 2021, I bought the
+								<a href="https://www.udemy.com/course/100-days-of-code/"
+									>100 Days of Code Python course</a
+								>
+								by Dr. Angela Yu on Udemy. After a few days, I realized I really
+								liked her way of teaching, so I also bought the
+								<a
+									href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
+									>2021 Full Web-development course</a
+								>
+								as well as the full
+								<a
+									href="https://www.udemy.com/course/ios-13-app-development-bootcamp/"
+									>Swift iOS App development course</a
+								>.
+							</p>
+						</div>
+					</section>
+				</div>
+				<div class="section">
+					<section id="technologies-section">
+						<h1 class="projects-header">Technologies</h1>
+						<div class="info-text">
+							<p class="about-me-short smaller-text">
+								Here is a list of programming languages I know. Included are
+								technologies or other packages/modules of that language. Also
+								mentioned are other aspects of programming I am experienced in.
+							</p>
+						</div>
+						<div class="skill-wrapper">
+							<div class="skill-card">
+								<h2>Python</h2>
+								<ul>
+									<li>File Sort</li>
+									<li>Encryption</li>
+									<li>Data Algorithms and Analysis</li>
+									<li>API Connectivity</li>
+								</ul>
+								<h4>Frameworks/Modules</h4>
+								<ul>
+									<li>Discord.py</li>
+									<li>PyMongo</li>
+									<li>Sheety</li>
+									<li>Pandas</li>
+								</ul>
+							</div>
+							<div class="skill-card">
+								<h2>JavaScript/NodeJS</h2>
+								<ul>
+									<li>Simple Algorithms</li>
+									<li>Simple Encryption</li>
+									<li>Authentication</li>
+									<li>API Connectivity</li>
+									<li>Bot Creation and Integration</li>
+								</ul>
+								<h4>Frameworks/Modules</h4>
+								<ul>
+									<li>ReactJS</li>
+									<li>express.js</li>
+									<li>Discord.js</li>
+									<li>Mongoose</li>
+								</ul>
+							</div>
+							<div class="skill-card">
+								<h2>HTML/CSS</h2>
+								<ul>
+									<li>Beautiful Websites</li>
+									<li>Functional with JavaScript</li>
+								</ul>
+								<h4>Frameworks/Modules</h4>
+								<ul>
+									<li>Bootstrap</li>
+									<li>SASS</li>
+								</ul>
+							</div>
+							<div class="skill-card">
+								<h2>File Storage</h2>
+								<ul>
+									<li>Simple File Storage in Database</li>
+									<li>Connectivity in Python or Javascript</li>
+									<li>MongoDB</li>
+								</ul>
+							</div>
+							<div class="skill-card">
+								<h2>Simple Java</h2>
+								<ul>
+									<li>Loops, Simple Graphic Interfaces</li>
+									<li>Object Oriented Programming</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="section">
+					<section id="footer-section">
+						<h1 class="projects-header">Talk to me</h1>
+						<div class="info-text">
+							<p class="about-me-short smaller-text">
+								I'd love to hear from you!
+								<span class="underline-span"
+									>I am <strong>currently available</strong> for Freelance
+									work.</span
+								>
+								It can be for the Backend with technologies like NodeJS and
+								Python, but also for the Frontend with either vanilla HTML,
+								Javascript and CSS or a technology like ReactJS. The best thing
+								to do is to contact me through my contact details down below.
+							</p>
+						</div>
+						<div class="outer-contact-wrapper">
+							<div class="contact-button-wrapper">
+								<button
+									class="btn btn-primary"
+									onclick="window.location.href='https://discord.com/channels/@me/523470488941494272';"
+								>
+									<div class="large-icon-button">
+										<i class="fab fa-discord" aria-hidden="true"></i>
+										<p>
+											Contact me through Discord Direct Message<br /><span
+												class="underline-span"
+												>@schulzdev#4766</span
+											>
+										</p>
+									</div>
+								</button>
+								<button
+									class="btn btn-secondary"
+									onclick="window.location.href='mailto:help@schulzdev.com';"
+								>
+									<div class="large-icon-button">
+										<i class="fas fa-envelope-open-text"></i>
+										<p>
+											Send me an Email<br /><span class="underline-span"
+												>help@schulzdev.com</span
+											>
+										</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="footer">
+							<p>
+								Made with much <i class="far fa-heart color-red"></i> by
+								SchulzDEV.
+							</p>
+							<p>
+								<span class="desktop-only">&copy;</span>You can use this Website
+								for your own personal purposes. Please credit me [<span
+									class="underline-span"
+									>SchulzDEV</span
+								>] visibly.
+							</p>
+						</div>
+					</section>
+				</div>
 			</div>
-			<!-- <div class="section">
-				<section id="about-section">
-					<h1 id="about-me-header">About Me</h1>
-					<div id="about-div">
-						<i class="fas fa-school about-icon"></i>
-						<p id="about-education">
-							I am a 16 year old Student that visits a "Gymnasium" in Germany.
-							<br />
-							I am currently visiting the 10th grade and I end with school in 2
-							years. After School, my dream is to become a Pilot.
-						</p>
-						<hr class="welcome-to-hr about-me-hr" />
-						<i class="fas fa-laptop-code about-icon" id="about-icon-dev"></i>
-						<p id="about-dev">
-							In the beginning of 2021, I bought the
-							<a href="https://www.udemy.com/course/100-days-of-code/"
-								>100 Days of Code Python course</a
-							>
-							by Dr. Angela Yu on Udemy. After a few days, I realized I really
-							liked her way of teaching, so I also bought the
-							<a
-								href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
-								>2021 Full Web-development course</a
-							>
-							as well as the full
-							<a
-								href="https://www.udemy.com/course/ios-13-app-development-bootcamp/"
-								>Swift iOS App development course</a
-							>.
-						</p>
-					</div>
-				</section>
-			</div> -->
-			<!-- <div class="section">
-				<section id="projects">
-					<h1 id="projects-header">Projects</h1>
-					<p class="about-me-short">
-						Thanks for your interest. Down below are some of my best projects.
-						Click on the Project to see the live preview(if applicable), else
-						click the button on the bottom to go to the specifc
-						<a href="https://www.github.com/schulzdev">GitHub</a> Repository!
-					</p>
-				</section>
-			</div> -->
 		</div>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"
-			integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
-			crossorigin="anonymous"
-		></script>
-
-		<script>
-			new fullpage("#fullPage", {
-				licenseKey: "YOUR KEY HERE",
-				autoScrolling: true,
-			});
-		</script>
 	</body>
 </html>
